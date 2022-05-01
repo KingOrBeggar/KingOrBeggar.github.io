@@ -1,453 +1,915 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
+
+
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/favicon.png">
-  
-  
-      
-<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="Hexo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
     
-    
-  
-  
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          rootUrl: '/',
-          fancybox: true,
-          animate: true,
-          isHome: true,
-          isPost: false,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false
-      }
-  </script>
+
+    <title>Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
 <meta name="generator" content="Hexo 6.0.0"></head>
+
+
 <body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            
-            <img lazy-src="/img/head.jpg" class="js-avatar">
-            
-        </a>
-
-        <hgroup>
-          <h1 class="header-author"><a href="/" title="Hi Mate"></a></h1>
-        </hgroup>
-
-        
-        
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
                     
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
             </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/Home">博客首页</a></li>
-                        
-                            <li><a href="/works">作品展示</a></li>
-                        
-                            <li><a href="/about">留言打卡</a></li>
-                        
-                            <li><a href="/FrontEndGuide">前端导航</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
-                            
-                                <a class="fl github" target="_blank" href="https://github.com/luuman" title="github">github</a>
-                            
-                                <a class="fl zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-                            
-                                <a class="fl weibo" target="_blank" href="#" title="weibo">weibo</a>
-                            
-                                <a class="fl google" target="_blank" href="#" title="google">google</a>
-                            
-                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
-                            
-                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://luuman.github.io/">name</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me"></a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
-                
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="Me"></a></h1>
-            </hgroup>
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/Home">博客首页</a></li>
-                
-                    <li><a href="/works">作品展示</a></li>
-                
-                    <li><a href="/about">留言打卡</a></li>
-                
-                    <li><a href="/FrontEndGuide">前端导航</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=PAkNDgsKBQ4MCnxNTRJfU1E" title="mail">mail</a>
-                    
-                        <a class="github" target="_blank" href="https://github.com/luuman" title="github">github</a>
-                    
-                        <a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-                    
-                        <a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-                    
-                        <a class="google" target="_blank" href="#" title="google">google</a>
-                    
-                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
-                    
-                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
-                    
-                </div>
-            </nav>
-        </header>                
-    </div>
-</nav>
-      <div class="body-wrap">
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
   
-    <article id="post-操作系统复习" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2022/01/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/" class="article-date">
-      <time datetime="2022-01-15T02:38:06.179Z" itemprop="datePublished">2022-01-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+  <li class="hide-on-med-and-down nav-item">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
+    <a href="/" class="waves-effect waves-light">
       
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
           
-        <h1 id="第一、二章"><a href="#第一、二章" class="headerlink" title="第一、二章"></a>第一、二章</h1><h1 id="第三章-进程与进程管理"><a href="#第三章-进程与进程管理" class="headerlink" title="第三章 进程与进程管理"></a>第三章 进程与进程管理</h1><h2 id="多道程序设计、进程概念"><a href="#多道程序设计、进程概念" class="headerlink" title="多道程序设计、进程概念"></a>多道程序设计、进程概念</h2><p>在多道程序处理机中，允许多个程序进入计算机系统的内存并运行，这种让多个程序同时进入计算机系统的方法叫做多道程序设计。</p>
-<p>进程是具有独立功能的可并发执行的程序在一个数据集合上的执行，是系统调度和资源分配的独立单位。</p>
-<h2 id="进程和程序的联系与区别（5）"><a href="#进程和程序的联系与区别（5）" class="headerlink" title="进程和程序的联系与区别（5）"></a>进程和程序的联系与区别（5）</h2><p>进程是程序的一次执行，是一个动态概念；程序是完成某个特定功能的指令有序序列，是一个静态概念。</p>
-<p>一个进程可以执行多个程序，一个程序可以被多个进程执行；</p>
-<p>进程是系统进行资源分配和调度的独立单位，程序不是。</p>
-<p>程序可以作为软件资源长期存在，而进程是一次执行过程，是由生命期的；</p>
-<p>进程是有结构的，由程序、数据、进程控制块组成。</p>
-<h2 id="进程的特征-2"><a href="#进程的特征-2" class="headerlink" title="进程的特征(2)"></a>进程的特征(2)</h2><p>动态性；并发性；</p>
-<h2 id="进程的状态转换图"><a href="#进程的状态转换图" class="headerlink" title="进程的状态转换图"></a>进程的状态转换图</h2><h2 id="进程控制块的作用（3）"><a href="#进程控制块的作用（3）" class="headerlink" title="进程控制块的作用（3）"></a>进程控制块的作用（3）</h2><p>记录进程信息</p>
-<p>操作系统是通过对进程控制块的信息来对进程进行管理和控制的；</p>
-<p>pcb是进程存在的唯一标志</p>
-<h2 id="进程控制块中的信息（4）"><a href="#进程控制块中的信息（4）" class="headerlink" title="进程控制块中的信息（4）"></a>进程控制块中的信息（4）</h2><p>进程标识符信息；处理及状态信息；进程调度信息；进程控制信息；</p>
-<h2 id="操作系统内核？"><a href="#操作系统内核？" class="headerlink" title="操作系统内核？"></a>操作系统内核？</h2><h2 id="进程控制块的组织方式（设计题）"><a href="#进程控制块的组织方式（设计题）" class="headerlink" title="进程控制块的组织方式（设计题）"></a>进程控制块的组织方式（设计题）</h2><p>系统根据进程控制块记录的进程状态建立几张索引表，例如：就绪索引表，阻塞索引表等，把各个索引表中的首项地址存在内存的专用单元中，索引表中记录相应状态的进程控制块在pcb表中的地址。</p>
-<h2 id="引起进程创建、终止、阻塞和唤醒的事件和过程"><a href="#引起进程创建、终止、阻塞和唤醒的事件和过程" class="headerlink" title="引起进程创建、终止、阻塞和唤醒的事件和过程"></a>引起进程创建、终止、阻塞和唤醒的事件和过程</h2><p>创建：</p>
-<p>事件：用户登录；作业调度；应用请求；提供服务；</p>
-<p>过程：申请空白进程控制块；为新进程分配资源；初始化进程控制块；将新进程插入到就绪队列；</p>
-<p>终止：</p>
-<p>事件：正常结束；异常结束；外界干预；</p>
-<p>过程：根据该进程的标识符检索PCB表，找到相应的进程控制块读出进程状态信息；如果进程状态处于执行，立即终止该进程，并设进程调度标志为真，指示该进程应被重新调度，选择一个新的进程，把处理机分配给他；若该进程还有子孙进程，应该全部终止，以防他们成为不可控的；将该进程所拥有的全部资源归还给其父进程或者系统；将被终止进程的PCB从所在队列中移除，等待其他程序来搜集信息；</p>
-<p>阻塞和唤醒</p>
-<p>事件：请求系统服务/完成；启动某种操作/完成；等待数据/完成；无/新工作可做；</p>
-<p>阻塞过程：停止执行；PCB中的状态信息由执行改为阻塞；插入到阻塞队列；</p>
-<p>唤醒过程：从阻塞队列中移除；PCB的状态改为就绪；插入到就绪队列；</p>
-<h2 id="进程调度的功能（2）、方式（2）、算法（7）、时机-（4）"><a href="#进程调度的功能（2）、方式（2）、算法（7）、时机-（4）" class="headerlink" title="进程调度的功能（2）、方式（2）、算法（7）、时机  （4）"></a>进程调度的功能（2）、方式（2）、算法（7）、时机  （4）</h2><p>功能：选择占有处理及的过程；进行进程上下文的切换；</p>
-<p>方式：剥夺式；非剥夺式；</p>
-<p>算法：先进先出；最高响应比优先（响应比 =（等待时间+服务时间）/ 服务时间）；最短处理机执行优先；优先级调度；时间片轮转；前后台调度；多级反馈轮转队列；</p>
-<p>时机：进程执行完毕；阻塞的进程等待的时间完成；时间片到；正在执行的进程发生等待事件；有优先级高的进程进入就绪队列；</p>
-<h2 id="用户级线程和内核支持线程的比较（3）"><a href="#用户级线程和内核支持线程的比较（3）" class="headerlink" title="用户级线程和内核支持线程的比较（3）"></a>用户级线程和内核支持线程的比较（3）</h2><p>内核支持线程的调度和切换类似进程，用户级线程通常发生在一个应用进程的诸线程之间，调度和切换相较于进程简单；</p>
-<p>内核支持线程进行系统的调用，被看作该线程的行为，用户级线程调用一个系统调用，被看作进程的行为；</p>
-<p>线程执行时间，内核支持线程的单位是线程，用户级线程的单位是进程；</p>
-<h1 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h1><h2 id="进程间的联系（2）"><a href="#进程间的联系（2）" class="headerlink" title="进程间的联系（2）"></a>进程间的联系（2）</h2><p>相互合作；共享资源；</p>
-<h2 id="临界资源和临界区的概念"><a href="#临界资源和临界区的概念" class="headerlink" title="临界资源和临界区的概念"></a>临界资源和临界区的概念</h2><p>临界资源：一个时刻只允许一个进程访问的资源；</p>
-<p>临界区：访问临界资源的代码；</p>
-<h2 id="经典的进程同步问题（生产者-消费者问题，读者-写者问题）"><a href="#经典的进程同步问题（生产者-消费者问题，读者-写者问题）" class="headerlink" title="经典的进程同步问题（生产者-消费者问题，读者-写者问题）"></a>经典的进程同步问题（生产者-消费者问题，读者-写者问题）</h2><h2 id="进程通信的概念"><a href="#进程通信的概念" class="headerlink" title="进程通信的概念"></a>进程通信的概念</h2><p>进程通信是指用户可以通过操作系统所提供的一组通信命令传送大量数据的通信方式</p>
-<h2 id="高级通信方式"><a href="#高级通信方式" class="headerlink" title="高级通信方式"></a>高级通信方式</h2><p>共享存储器系统、消息传递系统、管道通信系统；</p>
-<h2 id="管道（填空（共享文件））"><a href="#管道（填空（共享文件））" class="headerlink" title="管道（填空（共享文件））"></a>管道（填空（共享文件））</h2><p>管道是联系一个读进程和写进程之间通信的共享文件；</p>
-<h2 id="死锁的概念"><a href="#死锁的概念" class="headerlink" title="死锁的概念"></a>死锁的概念</h2><p>一组程序中的每一个进程均无限期等待该组中的另一个进程所占有且永远不会释放的资源。</p>
-<h2 id="产生死锁的原因（2）、必要条件（4）、解决办法（4）"><a href="#产生死锁的原因（2）、必要条件（4）、解决办法（4）" class="headerlink" title="产生死锁的原因（2）、必要条件（4）、解决办法（4）"></a>产生死锁的原因（2）、必要条件（4）、解决办法（4）</h2><p>原因：进程推进次序不当；竞争资源；</p>
-<p>必要条件：互斥条件；请求和保持条件；不剥夺条件；环路等待条件；</p>
-<p>解决办法：预防死锁；避免死锁；检测死锁；解决死锁；</p>
-<h2 id="预防死锁的方法（3）（x方法摒弃x条件）"><a href="#预防死锁的方法（3）（x方法摒弃x条件）" class="headerlink" title="预防死锁的方法（3）（x方法摒弃x条件）"></a>预防死锁的方法（3）（x方法摒弃x条件）</h2><p>能分配则一次性分配——摒弃请求和保持条件</p>
-<p>剥夺，立即释放资源——摒弃不剥夺条件</p>
-<p>资源线性排序，所有进程对资源的申请必须按资源的递增序号提出——摒弃环路等待条件</p>
-<h2 id="避免死锁的方案、死锁状态检测方案、安全性状态检测方案"><a href="#避免死锁的方案、死锁状态检测方案、安全性状态检测方案" class="headerlink" title="避免死锁的方案、死锁状态检测方案、安全性状态检测方案"></a>避免死锁的方案、死锁状态检测方案、安全性状态检测方案</h2><h1 id="第五章-存储器管理"><a href="#第五章-存储器管理" class="headerlink" title="第五章 存储器管理"></a>第五章 存储器管理</h1><h2 id="程序的装入方式（逻辑地址转换为物理地址）（方式名-时间）（3）"><a href="#程序的装入方式（逻辑地址转换为物理地址）（方式名-时间）（3）" class="headerlink" title="程序的装入方式（逻辑地址转换为物理地址）（方式名+时间）（3）"></a>程序的装入方式（逻辑地址转换为物理地址）（方式名+时间）（3）</h2><p>绝对装入方式——程序编译和汇编时</p>
-<p>可重定位装入方式——程序装入内存时</p>
-<p>动态运行时装入方式——程序执行时</p>
-<h2 id="连续存储方式（固定分区、可变分区）"><a href="#连续存储方式（固定分区、可变分区）" class="headerlink" title="连续存储方式（固定分区、可变分区）"></a>连续存储方式（固定分区、可变分区）</h2><h2 id="连续分配和回收方案"><a href="#连续分配和回收方案" class="headerlink" title="连续分配和回收方案"></a>连续分配和回收方案</h2><h1 id="第六章-虚拟存储器管理"><a href="#第六章-虚拟存储器管理" class="headerlink" title="第六章 虚拟存储器管理"></a>第六章 虚拟存储器管理</h1><h2 id="虚拟存储器实现的原理"><a href="#虚拟存储器实现的原理" class="headerlink" title="虚拟存储器实现的原理"></a>虚拟存储器实现的原理</h2><p>空间局部性：刚执行完的代码邻近的代码可能会被执行</p>
-<p>时间局部性：刚执行的代码过一段时间可能会被执行</p>
-<h2 id="虚拟存储器的定义、并非可以无限大的原因"><a href="#虚拟存储器的定义、并非可以无限大的原因" class="headerlink" title="虚拟存储器的定义、并非可以无限大的原因"></a>虚拟存储器的定义、并非可以无限大的原因</h2><p>虚拟存储器是指只将程序的一部分装入内存便可运行程序的存储器系统</p>
-<p>虚拟存储器大小收外存大小的影响，还受指令中地址长度的影响</p>
-<h2 id="页面置换算法（3）"><a href="#页面置换算法（3）" class="headerlink" title="页面置换算法（3）"></a>页面置换算法（3）</h2><p>最近最久未使用算法（LRU）；</p>
-<p>先进先出算法；</p>
-<p>最佳置换算法；</p>
-<h2 id="采用软件实现的LRU算法"><a href="#采用软件实现的LRU算法" class="headerlink" title="采用软件实现的LRU算法"></a>采用软件实现的LRU算法</h2><p>简单clock算法</p>
-<h2 id="最少物理块数"><a href="#最少物理块数" class="headerlink" title="最少物理块数"></a>最少物理块数</h2><p>最少物理块数是指进程运行需要的最少物理块</p>
-<h2 id="产生抖动的原因"><a href="#产生抖动的原因" class="headerlink" title="产生抖动的原因"></a>产生抖动的原因</h2><p>每个进程频繁的发生缺页中断，每个进程大部分时间都在换页，而没有时间执行别的，导致处理机的利用率大大下降，而趋于零的现象称为抖动。</p>
-<h2 id="工作集的概念"><a href="#工作集的概念" class="headerlink" title="工作集的概念"></a>工作集的概念</h2><p>进程在一定时间间隔内访问页面的集合；</p>
-<h2 id="预防抖动的方法（4）"><a href="#预防抖动的方法（4）" class="headerlink" title="预防抖动的方法（4）"></a>预防抖动的方法（4）</h2><p>局部置换；工作集算法；利用L=s调节；挂起某些进程；</p>
-<h1 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h1><h2 id="文件概念"><a href="#文件概念" class="headerlink" title="文件概念"></a>文件概念</h2><h2 id="文件的逻辑结构概念及分类（2）"><a href="#文件的逻辑结构概念及分类（2）" class="headerlink" title="文件的逻辑结构概念及分类（2）"></a>文件的逻辑结构概念及分类（2）</h2><p>连续结构：</p>
-<p>离散结构：</p>
-<h2 id="文件的物理结构概念及分类（3）"><a href="#文件的物理结构概念及分类（3）" class="headerlink" title="文件的物理结构概念及分类（3）"></a>文件的物理结构概念及分类（3）</h2><h2 id="磁带是什么设备，其上文件的组织方式及物理结构"><a href="#磁带是什么设备，其上文件的组织方式及物理结构" class="headerlink" title="磁带是什么设备，其上文件的组织方式及物理结构"></a>磁带是什么设备，其上文件的组织方式及物理结构</h2><h2 id="磁盘是什么设备，其上的文件可以采用的物理结构"><a href="#磁盘是什么设备，其上的文件可以采用的物理结构" class="headerlink" title="磁盘是什么设备，其上的文件可以采用的物理结构"></a>磁盘是什么设备，其上的文件可以采用的物理结构</h2><h2 id="实现文件共享的方法名称及概念（3）"><a href="#实现文件共享的方法名称及概念（3）" class="headerlink" title="实现文件共享的方法名称及概念（3）"></a>实现文件共享的方法名称及概念（3）</h2><h2 id="影响文件系统安全性的主要因素（3）"><a href="#影响文件系统安全性的主要因素（3）" class="headerlink" title="影响文件系统安全性的主要因素（3）"></a>影响文件系统安全性的主要因素（3）</h2><h2 id="防止人为因素造成文件不安全性的措施（4）（指定访问权限用的方法）"><a href="#防止人为因素造成文件不安全性的措施（4）（指定访问权限用的方法）" class="headerlink" title="防止人为因素造成文件不安全性的措施（4）（指定访问权限用的方法）"></a>防止人为因素造成文件不安全性的措施（4）（指定访问权限用的方法）</h2><h2 id="磁盘容错技术（2）"><a href="#磁盘容错技术（2）" class="headerlink" title="磁盘容错技术（2）"></a>磁盘容错技术（2）</h2><h2 id="磁盘I-O时间分成哪几部分（3）"><a href="#磁盘I-O时间分成哪几部分（3）" class="headerlink" title="磁盘I/O时间分成哪几部分（3）"></a>磁盘I/O时间分成哪几部分（3）</h2><h2 id="磁盘的移臂调度不同算法所需的时间"><a href="#磁盘的移臂调度不同算法所需的时间" class="headerlink" title="磁盘的移臂调度不同算法所需的时间"></a>磁盘的移臂调度不同算法所需的时间</h2><h1 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h1><p>通道</p>
-<p>-</p>
-
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
 </div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                &copy; 2022 John Doe
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item  white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    subtitle
+                
             </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
-        
-            <div class="visit">
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>Start
+                </a>
+
                 
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >海贼到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
                 
             </div>
-        
-    </div>
-</footer>
-
-    </div>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+            <div class="cover-social-link">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
 
-<script src="/js/main.js"></script>
 
-
-    <script>
-        $(document).ready(function() {
-            var backgroundnum = 24;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
 
 
 
 
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
 </div>
+        </div>
+    </div>
+
+    
+</div>
+
 <script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
         };
-    })
-</script>
+        autoCarousel();
+        
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
 
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
         });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
     });
 </script>
 
 
-  </div>
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
+    </div>
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/01/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                第一、二章第三章 进程与进程管理多道程序设计、进程概念在多道程序处理机中，允许多个程序进入计算机系统的内存并运行，这种让多个程序同时进入计算机系统的方法叫做多道程序设计。
+进程是具有独立功能的可并发执行的程序在一个数据集合上的执行，是系统调
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                John Doe
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+        </div>
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"live2d-widget-model-haruto"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
 </html>
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/love.js"></script>
-<!-- 引入jquery -->
-<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
-<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
-<!-- 雪花特效 -->
-<script type="text/javascript" src="\js\snow.js"></script>
-
-
